@@ -1,6 +1,7 @@
-package tunisianet.BDD;
+package tunisianet.bdd;
 
 import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 

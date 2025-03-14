@@ -1,4 +1,6 @@
-package tunisianet.BDD;
+package tunisianet.bdd;
+
+import static org.junit.Assert.assertEquals;
 
 import java.time.Duration;
 
@@ -7,11 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tunisianet.po.AjoutSuppressionProduitPage;
 import tunisianet.po.FiltragePage;
+import org.junit.jupiter.api.Test;
 
 public class StepDefinitionFiltrage {
 
@@ -35,32 +39,26 @@ public class StepDefinitionFiltrage {
 		filtragePage = new FiltragePage(driver);
 	}
 	
-	@When("I click on informatique")
-	public void i_click_on_informatique() {
-		filtragePage.getButnInformatique().click();
+
+	@When("I click on Téléphonie Tablette")
+	public void i_click_on_téléphonie_tablette() {
+		filtragePage.getTéléphonieTablette().click();
 	}
 
-	@When("I click on the Ordinateur Portable section")
-	public void i_click_on_the_ordinateur_portable_section() {
+	@When("I click on Ordinateur Portable section")
+	public void i_click_on_ordinateur_portable_section() {
 		filtragePage.getTéléphonePortable().click();
 	}
 
-	@Then("The search results are correctly displayed")
-	public void the_search_results_are_correctly_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
 
-	@When("I select the Fabricant under Fabricants")
+	@And("I select the Fabricant under Fabricants")
 	public void i_select_the_fabricant_under_fabricants(String docString) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		filtragePage.getNokiaFabricant().click();
 	}
 
 	@Then("The display shows the searched products correctly filtered by Fabricant")
 	public void the_display_shows_the_searched_products_correctly_filtered_by_fabricant() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		assertEquals("Nokia", filtragePage.getNokiaFitredText().getText());
 	}
 	
 	

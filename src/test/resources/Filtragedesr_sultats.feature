@@ -5,12 +5,12 @@ Feature: Filtragedesrésultats
 	@TUN-TC-21 @JREQ-TUN-2 @JREQ-TUN-9 @AIO-FOLDER-Recherche_et_Filtrage_de_Produits/Filtrage_des_résultats
 	Scenario: Filtrer par Fabricants
 		Given The user is on the homepage Tunisianet 
-		When I click on informatique
-		And I click on the Ordinateur Portable section
-		Then The search results are correctly displayed
-		When I select the Fabricant under Fabricants
+		When I click on Téléphonie Tablette
+		And I click on Ordinateur Portable section
+		
+		And I select the Fabricant under Fabricants
 			"""
-			Fabricant = Apple
+			Nokia
 			"""
 		Then The display shows the searched products correctly filtered by Fabricant
 	

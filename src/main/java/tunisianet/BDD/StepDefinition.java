@@ -1,24 +1,22 @@
-package tunisianet.BDD;
+package tunisianet.bdd;
+
+import static org.junit.Assert.assertEquals;
 
 import java.time.Duration;
-import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tunisianet.po.AjoutSuppressionProduitPage;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+
 
 public class StepDefinition {
 	private WebDriver driver;

@@ -1,4 +1,4 @@
-package tunisianet.BDD;
+package tunisianet.bdd;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,6 +17,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tunisianet.po.AjoutSuppressionProduitPage;
 import tunisianet.po.ConnexionPage;
+import org.junit.jupiter.api.Test;
 
 public class StepDefinitionConnexion {
 

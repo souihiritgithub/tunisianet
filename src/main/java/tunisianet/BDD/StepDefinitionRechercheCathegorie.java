@@ -1,4 +1,4 @@
-package tunisianet.BDD;
+package tunisianet.bdd;
 
 import java.time.Duration;
 
@@ -14,6 +14,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tunisianet.po.RechercheCathegoriePage;
 import tunisianet.po.RechercheProduitPage;
+import org.junit.jupiter.api.Test;
 
 public class StepDefinitionRechercheCathegorie {
 	
